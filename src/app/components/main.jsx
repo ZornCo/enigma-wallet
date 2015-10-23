@@ -14,7 +14,7 @@ const Main = React.createClass({
 		muiTheme: React.PropTypes.object,
 	},
 
-	getInitialState () {
+	getInitialState() {
 		return {
 			muiTheme: ThemeManager.getMuiTheme(LightRawTheme),
 		};
