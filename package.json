@@ -2,10 +2,10 @@
   "name": "enigma-wallet",
   "version": "1.0.0",
   "description": "A secure data storage application",
-  "main": "src/www/index.html",
+  "main": "build/www/index.html",
   "window": {
     "title": "Enigma Wallet",
-    "icon": "src/link.png",
+    "icon": "build/link.png",
     "toolbar": false,
     "frame": true,
     "width": 800,

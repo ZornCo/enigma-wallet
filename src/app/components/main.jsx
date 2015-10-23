@@ -1,3 +1,4 @@
+'use strict';
 /** In this file, we create a React component which incorporates components provided by material-ui */
 
 const React = require('react');
@@ -9,62 +10,62 @@ const Colors = require('material-ui/lib/styles/colors');
 
 const Main = React.createClass({
 
-  childContextTypes: {
-    muiTheme: React.PropTypes.object,
-  },
+	childContextTypes: {
+		muiTheme: React.PropTypes.object,
+	},
 
-  getInitialState () {
-    return {
-      muiTheme: ThemeManager.getMuiTheme(LightRawTheme),
-    };
-  },
+	getInitialState () {
+		return {
+			muiTheme: ThemeManager.getMuiTheme(LightRawTheme),
+		};
+	},
 
-  getChildContext() {
-    return {
-      muiTheme: this.state.muiTheme,
-    };
-  },
+	getChildContext() {
+		return {
+			muiTheme: this.state.muiTheme,
+		};
+	},
 
-  componentWillMount() {
-    let newMuiTheme = ThemeManager.modifyRawThemePalette(this.state.muiTheme, {
-      accent1Color: Colors.deepOrange500,
-    });
-    
-    this.setState({muiTheme: newMuiTheme});
-  },
+	componentWillMount() {
+		let newMuiTheme = ThemeManager.modifyRawThemePalette(this.state.muiTheme, {
+			accent1Color: Colors.deepOrange500,
+		});
+		
+		this.setState({muiTheme: newMuiTheme});
+	},
 
-  render() {
+	render() {
 
-    let containerStyle = {
-      textAlign: 'center',
-      paddingTop: '200px',
-    };
+		let containerStyle = {
+			textAlign: 'center',
+			paddingTop: '200px',
+		};
 
-    let standardActions = [
-      { text: 'Okay' },
-    ];
+		let standardActions = [
+			{ text: 'Okay' },
+		];
 
-    return (
-      <div style={containerStyle}>
-        <Dialog
-          title="Super Secret Password"
-          actions={standardActions}
-          ref="superSecretPasswordDialog">
-          1-2-3-4-5
-        </Dialog>
+		return (
+			<div style={containerStyle}>
+				<Dialog
+					title="Super Secret Password"
+					actions={standardActions}
+					ref="superSecretPasswordDialog">
+					1-2-3-4-5
+				</Dialog>
 
-        <h1>material-ui</h1>
-        <h2>example project</h2>
+				<h1>material-ui</h1>
+				<h2>example project</h2>
 
-        <RaisedButton label="Super Secret Password" primary={true} onTouchTap={this._handleTouchTap} />
+				<RaisedButton label="Super Secret Password" primary={true} onTouchTap={this._handleTouchTap} />
 
-      </div>
-    );
-  },
+			</div>
+		);
+	},
 
-  _handleTouchTap() {
-    this.refs.superSecretPasswordDialog.show();
-  },
+	_handleTouchTap() {
+		this.refs.superSecretPasswordDialog.show();
+	},
 
 });
 
