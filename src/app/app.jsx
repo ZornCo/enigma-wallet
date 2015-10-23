@@ -2,8 +2,6 @@
 
 (function()
 {
-	window.addEventListener("keypress", function() { gui.Window.get().showDevTools(); }, false);
-
 	let React = require('react');
 	let ReactDOM = require('react-dom');
 	let injectTapEventPlugin = require('react-tap-event-plugin');
