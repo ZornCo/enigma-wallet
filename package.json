@@ -1,0 +1,39 @@
+{
+  "name": "enigma-wallet",
+  "version": "1.0.0",
+  "description": "A secure data storage application",
+  "main": "src/www/index.html",
+  "window": {
+    "title": "Enigma Wallet",
+    "icon": "src/link.png",
+    "toolbar": false,
+    "frame": true,
+    "width": 800,
+    "height": 500,
+    "position": "center",
+    "min_width": 400,
+    "min_height": 200
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@zornco.com:zornco/enigma-wallet"
+  },
+  "author": "ZornCo",
+  "license": "ISC",
+  "dependencies": {
+    "material-ui": "^0.13.0",
+    "react": "^0.14.0",
+    "react-addons-create-fragment": "^0.14.0",
+    "react-addons-pure-render-mixin": "^0.14.0",
+    "react-addons-transition-group": "^0.14.0",
+    "react-addons-update": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-tap-event-plugin": "^0.2.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-react": "^0.12.3"
+  }
+}
